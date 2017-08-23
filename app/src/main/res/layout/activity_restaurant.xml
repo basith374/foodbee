@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.foodbee.foodbee.RestaurantActivity"
+    android:background="#efefef">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/filter_btns">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FILTER"
+            android:layout_weight="1"
+            android:background="@drawable/tab_btn"/>
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#ccc" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CUISINES"
+            android:layout_weight="1"
+            android:background="@drawable/tab_btn" />
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#ccc" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEARCH"
+            android:layout_weight="1"
+            android:background="@drawable/tab_btn" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESTAURANTS"
+        android:id="@+id/list_head"
+        android:layout_below="@+id/filter_btns"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="10dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/list_head">
+
+    </ListView>
+
+
+</RelativeLayout>
