@@ -23,6 +23,8 @@ public class RestaurantActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         list = new ArrayList<>();
         list.add(new Restaurant("KFC", "Cash, Credit Card", 456));
         list.add(new Restaurant("McDonalds", "Cash, Credit Card", 698));
@@ -32,6 +34,12 @@ public class RestaurantActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.list_view);
         MyAdapter adapter = new MyAdapter(this, R.layout.order_list_item);
         listView.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
     class Restaurant {
