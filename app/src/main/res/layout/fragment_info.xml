@@ -4,10 +4,114 @@
     android:layout_height="match_parent"
     tools:context="com.foodbee.foodbee.menu.InfoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:divider="@drawable/divider"
+        android:showDividers="middle"
+        android:background="#fff">
+
+        <TableRow>
+            <TextView
+                android:text="Area"
+                android:paddingTop="@dimen/table_item_padding"
+                android:paddingBottom="@dimen/table_item_padding"
+                android:paddingRight="@dimen/table_item_padding"
+                android:textColor="@color/textSecondary"/>
+            <TextView
+                android:text="Area"
+                android:id="@+id/area"
+                android:paddingTop="@dimen/table_item_padding"
+                android:paddingBottom="@dimen/table_item_padding"
+                android:textColor="@color/textPrimary"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Status"
+                android:paddingTop="@dimen/table_item_padding"
+                android:paddingBottom="@dimen/table_item_padding"
+                android:paddingRight="@dimen/table_item_padding"
+                android:textColor="@color/textSecondary"/>
+            <TextView
+                android:text="Status"
+                android:id="@+id/status"
+                android:paddingTop="@dimen/table_item_padding"
+                android:paddingBottom="@dimen/table_item_padding"
+                android:textColor="@color/textPrimary"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Cuisines"
+                android:paddingTop="@dimen/table_item_padding"
+                android:paddingBottom="@dimen/table_item_padding"
+                android:paddingRight="@dimen/table_item_padding"
+                android:textColor="@color/textSecondary"/>
+            <TextView
+                android:text="Cuisines"
+                android:id="@+id/cuisines"
+                android:paddingTop="@dimen/table_item_padding"
+                android:paddingBottom="@dimen/table_item_padding"
+                android:textColor="@color/textPrimary"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Opening Hours"
+                android:paddingTop="@dimen/table_item_padding"
+                android:paddingBottom="@dimen/table_item_padding"
+                android:paddingRight="@dimen/table_item_padding"
+                android:textColor="@color/textSecondary"/>
+            <TextView
+                android:text="Opening Hours"
+                android:id="@+id/opening_hours"
+                android:paddingTop="@dimen/table_item_padding"
+                android:paddingBottom="@dimen/table_item_padding"
+                android:textColor="@color/textPrimary"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Delivery time"
+                android:paddingTop="@dimen/table_item_padding"
+                android:paddingBottom="@dimen/table_item_padding"
+                android:paddingRight="@dimen/table_item_padding"
+                android:textColor="@color/textSecondary"/>
+            <TextView
+                android:text="Delivery time"
+                android:id="@+id/delivery_time"
+                android:paddingTop="@dimen/table_item_padding"
+                android:paddingBottom="@dimen/table_item_padding"
+                android:textColor="@color/textPrimary"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Minimum Order"
+                android:paddingTop="@dimen/table_item_padding"
+                android:paddingBottom="@dimen/table_item_padding"
+                android:paddingRight="@dimen/table_item_padding"
+                android:textColor="@color/textSecondary"/>
+            <TextView
+                android:text="Minimum Order"
+                android:id="@+id/minimum_order"
+                android:paddingTop="@dimen/table_item_padding"
+                android:paddingBottom="@dimen/table_item_padding"
+                android:textColor="@color/textPrimary"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Delivery fee"
+                android:paddingTop="@dimen/table_item_padding"
+                android:paddingBottom="@dimen/table_item_padding"
+                android:paddingRight="@dimen/table_item_padding"
+                android:textColor="@color/textSecondary"/>
+            <TextView
+                android:text="Delivery fee"
+                android:id="@+id/delivery_fee"
+                android:paddingTop="@dimen/table_item_padding"
+                android:paddingBottom="@dimen/table_item_padding"
+                android:textColor="@color/textPrimary"/>
+        </TableRow>
+    </TableLayout>
 
 </FrameLayout>

@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:text="Category"
         android:id="@+id/name"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:textColor="@color/textPrimary"/>
     <ImageView
         android:layout_width="24dp"
         android:layout_height="24dp"

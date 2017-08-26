@@ -1,14 +1,24 @@
 package com.foodbee.foodbee.menu;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
+import com.foodbee.foodbee.MenuActivity;
 import com.foodbee.foodbee.R;
+import com.foodbee.foodbee.RestaurantActivity;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +39,8 @@ public class ReviewsFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    List<Review> list;
 
     public ReviewsFragment() {
         // Required empty public constructor
@@ -64,8 +76,19 @@ public class ReviewsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        list = new ArrayList<>();
+        list.add(new Review("A cool customer", "26 Aug 2017", "Awesome", 4.5f));
+        list.add(new Review("A cool customer", "26 Aug 2017", "Awesome", 4.5f));
+        list.add(new Review("A cool customer", "26 Aug 2017", "Awesome", 4.5f));
+        list.add(new Review("A cool customer", "26 Aug 2017", "Awesome", 4.5f));
+        list.add(new Review("A cool customer", "26 Aug 2017", "Awesome", 4.5f));
+        list.add(new Review("A cool customer", "26 Aug 2017", "Awesome", 4.5f));
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_reviews, container, false);
+        View view = inflater.inflate(R.layout.fragment_reviews, container, false);
+        ListView listView = (ListView) view.findViewById(R.id.list_view);
+        listView.setAdapter(new MyAdapter(getActivity(), R.layout.review_list_item));
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -105,5 +128,51 @@ public class ReviewsFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    class Review {
+        float rating;
+        String name;
+        String date;
+        String review;
+
+        public Review(String name, String date, String review, float rating) {
+            this.name = name;
+            this.date = date;
+            this.review = review;
+            this.rating = rating;
+        }
+    }
+
+    class MyAdapter extends ArrayAdapter<Review> {
+
+        public MyAdapter(Context context, int resource) {
+            super(context, resource);
+        }
+
+        @Override
+        public int getCount() {
+            return list.size();
+        }
+
+        @Override
+        public Review getItem(int i) {
+            return list.get(i);
+        }
+
+        @Override
+        public long getItemId(int i) {
+            return i;
+        }
+
+        @Override
+        public View getView(int i, View view, ViewGroup viewGroup) {
+            Review review = getItem(i);
+            View itemView = getActivity().getLayoutInflater().inflate(R.layout.review_list_item, viewGroup, false);
+            ((TextView) itemView.findViewById(R.id.name)).setText(review.name);
+            ((TextView) itemView.findViewById(R.id.date)).setText(review.date);
+            ((TextView) itemView.findViewById(R.id.review)).setText(review.review);
+            return itemView;
+        }
     }
 }

@@ -16,8 +16,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="FILTER"
+            android:background="@drawable/tab_btn"
             android:layout_weight="1"
-            android:background="@drawable/tab_btn"/>
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:drawableLeft="@drawable/ic_filter_list_black_24dp" />
         <LinearLayout
             android:layout_width="1dp"
             android:layout_height="match_parent"
@@ -27,7 +30,10 @@
             android:layout_height="wrap_content"
             android:text="CUISINES"
             android:layout_weight="1"
-            android:background="@drawable/tab_btn" />
+            android:background="@drawable/tab_btn"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:drawableLeft="@drawable/ic_local_dining_black_24dp" />
         <LinearLayout
             android:layout_width="1dp"
             android:layout_height="match_parent"
@@ -37,18 +43,29 @@
             android:layout_height="wrap_content"
             android:text="SEARCH"
             android:layout_weight="1"
-            android:background="@drawable/tab_btn" />
+            android:background="@drawable/tab_btn"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:drawableLeft="@drawable/ic_search_black_24dp" />
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RESTAURANTS"
         android:id="@+id/list_head"
-        android:layout_below="@+id/filter_btns"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:padding="10dp"/>
+        android:layout_below="@id/filter_btns">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESTAURANTS"
+            android:padding="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/drop_shadow"></LinearLayout>
+    </FrameLayout>
 
     <ListView
         android:layout_width="match_parent"

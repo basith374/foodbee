@@ -11,8 +11,11 @@
         android:id="@+id/list_view"
         android:groupIndicator="@null"
         android:dividerHeight="10dp"
-        android:childDivider="#00000000">
+        android:divider="#00000000"
+        android:childDivider="#00000000"
+        android:clipToPadding="false">
 
     </ExpandableListView>
+
 
 </FrameLayout>

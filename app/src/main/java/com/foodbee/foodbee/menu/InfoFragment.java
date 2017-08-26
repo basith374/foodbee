@@ -4,9 +4,11 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.foodbee.foodbee.R;
 
@@ -65,7 +67,20 @@ public class InfoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_info, container, false);
+        View view = inflater.inflate(R.layout.fragment_info, container, false);
+        fillInfo(view);
+        return view;
+    }
+
+    private void fillInfo(View view) {
+        ((TextView) view.findViewById(R.id.area)).setText("Thalassery");
+        ((TextView) view.findViewById(R.id.status)).setText("Open");
+        ((TextView) view.findViewById(R.id.status)).setTextColor(ContextCompat.getColor(getActivity(), R.color.green));
+        ((TextView) view.findViewById(R.id.cuisines)).setText("Arabic, Chinese");
+        ((TextView) view.findViewById(R.id.opening_hours)).setText("10:00 AM - 11:00 PM");
+        ((TextView) view.findViewById(R.id.delivery_time)).setText("30 mins");
+        ((TextView) view.findViewById(R.id.minimum_order)).setText("INR 500");
+        ((TextView) view.findViewById(R.id.delivery_fee)).setText("INR 30");
     }
 
     // TODO: Rename method, update argument and hook method into UI event

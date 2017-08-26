@@ -9,21 +9,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+        </activity>
+        <activity
+            android:name=".RestaurantActivity"
+            android:label="Restaurants" />
+        <activity
+            android:name=".MenuActivity"
+            android:label="Menu" />
+        <activity
+            android:name=".CartActivity"
+            android:label="Cart" />
+        <activity
+            android:name=".FoodActivity"
+            android:label="Item Details" />
+        <activity android:name=".SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
 
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".RestaurantActivity"
-            android:label="Restaurants" />
-        <activity android:name=".MenuActivity"
-            android:label="Menu" />
-        <activity android:name=".CartActivity"
-            android:label="Cart" />
-        <activity android:name=".FoodActivity"
-            android:label="Item Details" />
     </application>
 
 </manifest>

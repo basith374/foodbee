@@ -51,7 +51,8 @@
             android:layout_height="24dp"
             android:background="@drawable/btn_accent"
             android:drawableLeft="@drawable/ic_add_white_24dp"
-            android:gravity="center"
-            />
+            android:layout_gravity="end"
+            android:id="@+id/add_btn"
+            android:elevation="0dp"/>
     </LinearLayout>
 </LinearLayout>

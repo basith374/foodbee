@@ -10,11 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.foodbee.foodbee.FoodActivity;
 import com.foodbee.foodbee.MenuActivity;
 import com.foodbee.foodbee.R;
 import com.foodbee.foodbee.RestaurantActivity;
@@ -55,13 +57,13 @@ public class MenuFragment extends Fragment {
         list.add(new Category("Wrap Saj"));
         list.add(new Category("Pizza"));
         foods = new ArrayList<>();
-        foods.add(new Food("Veg Kuruma", "A hint of parsley", "Gourmet Made, Delicious", "129"));
-        foods.add(new Food("Veg Kuruma", "A hint of parsley", "Gourmet Made, Delicious", "129"));
-        foods.add(new Food("Veg Kuruma", "A hint of parsley", "Gourmet Made, Delicious", "129"));
-        foods.add(new Food("Veg Kuruma", "A hint of parsley", "Gourmet Made, Delicious", "129"));
-        foods.add(new Food("Veg Kuruma", "A hint of parsley", "Gourmet Made, Delicious", "129"));
-        foods.add(new Food("Veg Kuruma", "A hint of parsley", "Gourmet Made, Delicious", "129"));
-        foods.add(new Food("Veg Kuruma", "A hint of parsley", "Gourmet Made, Delicious", "129"));
+        foods.add(new Food("Veg Kuruma", "A hint of parsley", "Gourmet Made, Delicious", "129.00"));
+        foods.add(new Food("Chicken Porotta", "A hint of parsley", "Gourmet Made, Delicious", "129.00"));
+        foods.add(new Food("Spanish Delight", "A hint of parsley", "Gourmet Made, Delicious", "129.00"));
+        foods.add(new Food("Foozie Fooman", "A hint of parsley", "Gourmet Made, Delicious", "129.00"));
+        foods.add(new Food("Veg Kuruma", "A hint of parsley", "Gourmet Made, Delicious", "129.00"));
+        foods.add(new Food("Veg Kuruma", "A hint of parsley", "Gourmet Made, Delicious", "129.00"));
+        foods.add(new Food("Veg Kuruma", "A hint of parsley", "Gourmet Made, Delicious", "129.00"));
     }
 
     /**
@@ -220,6 +222,13 @@ public class MenuFragment extends Fragment {
             ((TextView) itemView.findViewById(R.id.desc)).setText(food.desc);
             ((TextView) itemView.findViewById(R.id.extra)).setText(food.extra);
             ((TextView) itemView.findViewById(R.id.price)).setText(food.price);
+            itemView.findViewById(R.id.add_btn).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(), FoodActivity.class);
+                    getActivity().startActivity(intent);
+                }
+            });
             return itemView;
         }
 
