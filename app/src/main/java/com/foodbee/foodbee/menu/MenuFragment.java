@@ -222,7 +222,7 @@ public class MenuFragment extends Fragment {
             ((TextView) itemView.findViewById(R.id.desc)).setText(food.desc);
             ((TextView) itemView.findViewById(R.id.extra)).setText(food.extra);
             ((TextView) itemView.findViewById(R.id.price)).setText(food.price);
-            itemView.findViewById(R.id.add_btn).setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(getActivity(), FoodActivity.class);

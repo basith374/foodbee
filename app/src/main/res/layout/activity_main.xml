@@ -33,7 +33,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:background="@drawable/input"
-                    android:hint="Search Restaurant"
+                    android:hint="@string/restaurant_search_hint"
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:id="@+id/searchInput"

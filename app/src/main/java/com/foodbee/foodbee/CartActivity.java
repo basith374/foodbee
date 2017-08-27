@@ -31,7 +31,6 @@ public class CartActivity extends AppCompatActivity {
         list.add(new CartHead("Rara Avis", "Thalassery"));
         list.add(new CartItem("Chicken Sandwich", 1, 29));
         list.add(new CartItem("Doner Kabab", 2, 384));
-        list.add(new CartHead("Thalassery Club", "Thalassery"));
         list.add(new CartItem("Paratta", 3, 34));
         list.add(new CartItem("Manchurian Fries", 1, 48));
         list.add(new CartItem("Foozie Fries", 1, 48));
