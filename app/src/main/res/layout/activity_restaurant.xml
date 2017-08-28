@@ -19,7 +19,8 @@
             android:layout_weight="1"
             android:background="@drawable/tab_btn"
             android:layout_gravity="center"
-            android:gravity="center">
+            android:gravity="center"
+            android:onClick="showFilters">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -42,7 +43,8 @@
             android:layout_weight="1"
             android:background="@drawable/tab_btn"
             android:layout_gravity="center"
-            android:gravity="center">
+            android:gravity="center"
+            android:onClick="showCuisines">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

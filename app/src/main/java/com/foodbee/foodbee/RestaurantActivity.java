@@ -81,6 +81,16 @@ public class RestaurantActivity extends AppCompatActivity {
         return true;
     }
 
+    public void showFilters(View view) {
+        Intent intent = new Intent(this, FilterActivity.class);
+        startActivity(intent);
+    }
+
+    public void showCuisines(View view) {
+        Intent intent = new Intent(this, CuisineActivity.class);
+        startActivity(intent);
+    }
+
     interface RestaurantRow {
 
     }
