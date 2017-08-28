@@ -50,7 +50,7 @@
                         android:text="Chicken Sandwich"
                         android:textSize="16dp"
                         android:textColor="@color/textPrimary"
-                        android:textStyle="bold"/>
+                        android:fontFamily="sans-serif-medium" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -83,7 +83,8 @@
                         android:layout_height="wrap_content"
                         android:text="Special Request"
                         android:textColor="@color/textPrimary"
-                        android:layout_marginRight="5dp" />
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="sans-serif-medium" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -111,7 +112,8 @@
                     android:layout_height="wrap_content"
                     android:text="Quantity"
                     android:textColor="@color/textPrimary"
-                    android:layout_marginBottom="5dp"/>
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="sans-serif-medium" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

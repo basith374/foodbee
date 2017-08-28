@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_checkout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.foodbee.foodbee.CheckoutActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:elevation="3dp"
+                android:layout_marginBottom="10dp"
+                android:padding="20dp"
+                android:background="#fff">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Burger King"
+                    android:textColor="@color/textPrimary"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/divider">
+                </LinearLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1">
+                    <TableRow
+                        android:paddingTop="15dp"
+                        android:paddingBottom="5dp">
+                        <TextView
+                            android:text="1 x California Whopper Sandwich"
+                            android:textColor="@color/textSecondary"/>
+                        <TextView
+                            android:text="150.00"
+                            android:gravity="right"
+                            android:textColor="@color/textSecondary"/>
+                    </TableRow>
+                    <TableRow
+                        android:paddingTop="15dp"
+                        android:paddingBottom="5dp">
+                        <TextView
+                            android:text="1 x Chiken Fries"
+                            android:textColor="@color/textSecondary"/>
+                        <TextView
+                            android:text="250.00"
+                            android:gravity="right"
+                            android:textColor="@color/textSecondary"/>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:elevation="3dp"
+                android:layout_marginBottom="10dp"
+                android:background="#fff"
+                android:padding="20dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="General Request"
+                        android:textColor="@color/textPrimary"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="sans-serif-medium" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(Optional)"
+                        android:textColor="@color/textSecondary"/>
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@null"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:hint="Leave a note for the restaurant"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:elevation="3dp"
+                android:layout_marginBottom="10dp"
+                android:background="#fff"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pay with"
+                    android:textColor="@color/textPrimary"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cash"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Credit Card"/>
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/divider"></LinearLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1">
+                    <TableRow
+                        android:paddingTop="15dp"
+                        android:paddingBottom="5dp">
+                        <TextView
+                            android:text="Subtotal"
+                            android:textColor="@color/textSecondary"/>
+                        <TextView
+                            android:text="750.00"
+                            android:gravity="right"
+                            android:textColor="@color/textSecondary"/>
+                    </TableRow>
+                    <TableRow
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp">
+                        <TextView
+                            android:text="Discount"
+                            android:textColor="@color/red"/>
+                        <TextView
+                            android:text="-20.00"
+                            android:gravity="right"
+                            android:textColor="@color/red"/>
+                    </TableRow>
+                    <TableRow
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp">
+                        <TextView
+                            android:text="Delivery Fee"
+                            android:textColor="@color/textSecondary"/>
+                        <TextView
+                            android:text="0.00"
+                            android:textColor="@color/textSecondary"
+                            android:gravity="right"/>
+                    </TableRow>
+                    <TableRow
+                        android:paddingTop="10dp">
+                        <TextView
+                            android:text="Total Amount"
+                            android:textColor="@color/textPrimary"/>
+                        <TextView
+                            android:text="730.00"
+                            android:textColor="@color/textPrimary"
+                            android:gravity="right"/>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PLACE ORDER"
+                    android:textColor="#fff"
+                    android:background="@drawable/btn_cart"
+                    android:onClick="placeOrder"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

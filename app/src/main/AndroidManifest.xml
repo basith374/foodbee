@@ -32,10 +32,16 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".FilterActivity"
-            android:label="Filter"/>
-        <activity android:name=".CuisineActivity"
-            android:label="Choose Cuisine"></activity>
+        <activity
+            android:name=".FilterActivity"
+            android:label="Filter" />
+        <activity
+            android:name=".CuisineActivity"
+            android:label="Choose Cuisine" />
+        <activity android:name=".CheckoutActivity"
+            android:label="Checkout"/>
+        <activity android:name=".OrderConfirmationActivity"
+            android:label="Order Confirmation"></activity>
     </application>
 
 </manifest>

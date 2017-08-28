@@ -15,7 +15,8 @@
             android:textColor="@color/textPrimary"
             android:text="Food"
             android:layout_marginBottom="5dp"
-            android:id="@+id/name"/>
+            android:id="@+id/name"
+            android:fontFamily="sans-serif-medium"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
